@@ -59,9 +59,37 @@ Look at hwyE as it may be used for single fuel electric vehicles but could be fo
 check highwayUF to verify if for electric only vehicles as well as hybrid
 
 
+atv will show hybrid electric that does not plug in the wall, but uses gas engine for power.
+
+-
+# Get the column name at index 74
+column_name_at_index_74 = vehicle_data.columns[77] # mfrCode, c240Dscr, c240bDscr
+
+print(column_name_at_index_74)
+-
+
+combE Kwh / 100 miles
+comb08 - combined mileage  - miles per gallon OR Kwh consumed per 100 miles.
+- Using these two columns we need to estimate cost per mile and create a column for that.
 
 
 
+
+
+BrainStorm
+
+Purpose:
+1.	To view fuel economy improvements over the years.  Compare new vehicles fuel economy mpg to older vehicles.
+2.	To compare EV cars to gasoline cars, this will be including the co2 output of modern vehicles and the carbon output of coal powered power plants / kwh, the measure of fuel consumption for EVss
+3.	Compare the driving range of EVs to gasoline engines using one charge/tank of gasoline.
+4.	Compare the cost of operation of a vehicle per mile ev/gas
+5.	Compare the cost of maintenance of vehicles, ev/gas
+
+epa.gov – may contain the data for co2 output of coal fired power plants.
+Still need to find data on maintenance costs of vehicles
+
+The Amount of data cleaning on this data set to get usable data from it will be extensive.
+Notes, I will not plot data for flex fuel vehicles (ffv) or E85 or …. , I will stick with Electric, hybrid electric, premium, regular, Diesel.  I will search the data set for vehicles matching these descriptions.
 
 
 
@@ -117,8 +145,23 @@ phevCity
 phevHwy
 phevComb
 
+-------------------------------------
 
+More columns to omit round 2
 
+mfrCode, evMotor, sCharger, tCharger, trans_dscr, rangeHwy, rangeCity, mpgData, eng_dscr, engId, cityE,  
 
+try to combine fuelType and fuelType1 into one column drop fuelType rename fuelType1 to fuel_type
 
+verify which column we need or combine the following co2TailpipeGpm, co2
+After viewing in Data Wrangler, co2 and co2TailpipeGpm seem to contain the same data but one is rounded and one contains decimals - keeping co2
+- may find co2 produced in a coal fired power plant and see what the kWh co2 production is and add that in here.
+
+c240Dscr - rename to charge_descript_240
+
+charge240b - rename to charge_time_240
+
+using existing data need to figure out Gallons per mile and Kwh per mile to provide and equivalency to measure cost per mile.
+
+MPGe has the miles per gallon equivalency
 
