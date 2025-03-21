@@ -159,9 +159,17 @@ After viewing in Data Wrangler, co2 and co2TailpipeGpm seem to contain the same 
 
 c240Dscr - rename to charge_descript_240
 
-charge240b - rename to charge_time_240
+charge240b - drop alt charger time
+
+charge240 - rename to charge_hours_240
+
+
+rename comb08 to comb_MPG_MPGe
 
 using existing data need to figure out Gallons per mile and Kwh per mile to provide and equivalency to measure cost per mile.
 
 MPGe has the miles per gallon equivalency
 
+Annual fuel cost is based on 15,000 miles, 55% city driving, and the price of fuel used by the vehicle. change fuelCost08 to est_ann_fuel_cost
+
+may combine - Carbon Dioxide Emissions Coefficients  - with the vehicles and determine Co2 production per mile
