@@ -172,4 +172,6 @@ MPGe has the miles per gallon equivalency
 
 Annual fuel cost is based on 15,000 miles, 55% city driving, and the price of fuel used by the vehicle. change fuelCost08 to est_ann_fuel_cost
 
-may combine - Carbon Dioxide Emissions Coefficients  - with the vehicles and determine Co2 production per mile
+may combine - Carbon Dioxide Emissions Coefficients  - with the vehicles and determine Co2 production per mile - nvm already included in data 
+
+/ws/rest/ympg/shared/ympgVehicle/{id} - Return a summary of shared user MPG data for a specific
